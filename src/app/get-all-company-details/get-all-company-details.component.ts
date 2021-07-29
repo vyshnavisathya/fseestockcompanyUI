@@ -10,7 +10,7 @@ import { CompanyServiceService } from '../service/company-service.service';
 export class GetAllCompanyDetailsComponent implements OnInit {
 
   companies: any;
-  constructor(private companyService: CompanyServiceService) { 
+  constructor(private companyService: CompanyServiceService) {
     this.companies = [];
   }
 
@@ -21,12 +21,12 @@ export class GetAllCompanyDetailsComponent implements OnInit {
   getAllCompanyDetails() {
     this.companyService.getAllCompanyDetails().subscribe(
       data => {
-        console.log("companies", data)
+        console.log('companies', data);
         this.companies = data;
       },
       err => {
-        console.log("Error in retriving companies:(");
-      })
+        console.log('Error in retriving companies:(');
+      });
   }
 
 }

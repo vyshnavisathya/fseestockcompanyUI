@@ -14,23 +14,23 @@ export class GetCompanyDetailsComponent implements OnInit {
   companies: any;
   ifPresent = false;
   searchKeyword: string;
-  constructor(private companyService : CompanyServiceService) { 
+  constructor(private companyService: CompanyServiceService) {
     this.companies = [];
   }
 
   ngOnInit() {
    this.getCompanyDetails();
-  
+
   }
 
   getCompanyDetails() {
     this.companyService.getAllCompanyDetails().subscribe(
-      data=> {
-        console.log("Company details " , data);
+      data => {
+        console.log('Company details ' , data);
         this.companies = data;
         this.ifPresent = true;
       }
-    )
+    );
   }
 
 }

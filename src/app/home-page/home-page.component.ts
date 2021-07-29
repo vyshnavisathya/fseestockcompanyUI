@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-home-page',
@@ -7,9 +9,29 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomePageComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit() {
   }
+
+  addCompany = function() {
+    this.router.navigate(['/add-company']);
+  };
+
+  getAllCompanies = function() {
+    this.router.navigate(['/get-companies']);
+  };
+
+  addStock = function() {
+    this.router.navigate(['/add-stock']);
+  };
+
+  getStock = function() {
+    this.router.navigate(['/get-stock']);
+  };
+
+  getCompany = function() {
+    this.router.navigate(['/get-company']);
+  };
 
 }

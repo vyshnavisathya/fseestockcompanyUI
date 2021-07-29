@@ -1,7 +1,23 @@
 
-    <div>
-        <h1>E Stock Application</h1>
-        <h3>A Restful Microservice application, where it allows users to manage the stocks like create, view stock price details and company details.</h3>
-        <h4> Authenticate yourself before moving ahead </h4>
-    </div>
+         <div class="row estock-login">
+            <div class="col-sm-6">
+              <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title">Login</h5>
+                  <p class="card-text">Register the details of the company in stock market </p>
+                  <button type="button" class="btn btn-success" (click)="addCompany();">Login</button>
 
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title">Sign Up</h5>
+                  <p class="card-text">List all the companies registered in the EStock</p>
+                  <button type="button" class="btn btn-primary" (click)="getAllCompanies();">Sign Up</button>
+                </div>
+              </div>
+            </div>
+           
+                </div>

@@ -19,21 +19,20 @@ export class AddStockPriceComponent implements OnInit {
 
   ngOnInit() {
     this.stockForm = new FormGroup({
-      "id" : new FormControl('', [Validators.required]),
-      "stockPrice" : new FormControl('', [Validators.required]),
-      "companyCode" : new FormControl('', [Validators.required]),
-      "date" : new FormControl(new Date())
+      id : new FormControl('', [Validators.required]),
+      stockPrice : new FormControl('', [Validators.required]),
+      companyCode : new FormControl('', [Validators.required])
     });
   }
   send(stockForm) {
-    console.log("stock Fprm" , stockForm.value);
+    console.log('stock Fprm' , stockForm.value);
     this.stockService.addStock(stockForm.value).subscribe(
       data => {
         stockForm.reset();
       }, err  => {
-        alert('API call failed:(')
+        alert('API call failed:(');
       }
-    )
+    );
 
   }
 
