@@ -1,0 +1,25 @@
+<div id="card-container">
+    <div class="container">
+        <h2>ALL COMPANY DETAILS</h2>
+        <div class="row">
+            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-12">
+                <a href="">
+                    <div *ngFor="let company of companies">
+                        <div class="card-flyer">
+                            <div class="text-box">
+                                <div class="text-container">
+                                    <h6>Company Code : {{ company.companyCode }}</h6>
+                                    <h4>Company Name : {{ company.companyName }}</h4>
+                                    <p>Company Ceo : {{ company.companyCeo }}</p>
+                                    <p>Company Turnover : {{ company.companyTurnover }}</p>
+                                    <p>Company Website : {{ company.companyWebsite }}</p>
+                                    <p>StockExchange : {{ company.stockExchangess }}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>

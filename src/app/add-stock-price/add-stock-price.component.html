@@ -1,0 +1,27 @@
+<div class="container">
+    <form [formGroup]="stockForm" (submit)="send(stockForm)">
+        <h2 class="text-center">
+            ADD STOCK DETAILS
+        </h2>
+        <div class="row jumbotron">
+            <div class=" col-sm-12 form-group">
+                <label for="stockId">STOCK ID</label> 
+                <input type="text" class="form-control" id="stockId" placeholder="Enter the stock Id" required>
+            </div>
+            <div class=" col-sm-6 form-group">
+                <label for="stockPrice">STOCK PRICE</label> 
+                <input type="text" class="form-control" id="stockPrice" placeholder="Enter the stock price" required>
+            </div>
+            <div class=" col-sm-6 form-group">
+                <label for="companyCode">COMPANY CODE</label> 
+                <input type="text" class="form-control" id="companyCode" placeholder="Enter the company code" required>
+            </div>
+            <div class="col-sm-6 form-group mb-0 ">
+                <button class="btn btn-primary float-left " [disabled]="!stockForm.valid">ADD</button>
+            </div>
+            <div class="col-sm-6 form-group mb-0">
+                <button class="btn btn-primary float-right" onclick="resetForm(stockForm)">RESET</button>
+            </div>
+        </div>
+    </form>
+</div>

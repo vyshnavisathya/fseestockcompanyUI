@@ -1,0 +1,40 @@
+<div class="container">
+    <form [formGroup]="companyForm" (submit)= "send(companyForm)"> 
+        <h2 class="text-center">
+            ADD COMPANY DETAILS
+        </h2>
+        <div class="row jumbotron">
+            <div class=" col-sm-6 form-group">
+                <label for="companyCode">COMPANY CODE</label> 
+                <input type="text" class=" form-control" id="companyCode" placeholder="Enter the company code" required>
+            </div>
+            <div class=" col-sm-6 form-group">
+                <label for="companyName">COMPANY NAME</label> 
+                <input type="text" class="form-control" id="companyName" placeholder="Enter the company name" required>
+            </div>
+            <div class=" col-sm-6 form-group">
+                <label for="companyCeo">COMPANY CEO</label> 
+                <input type="text" class="form-control" id="companyCeo" placeholder="Enter the name of company ceo" required>
+            </div>
+            <div class=" col-sm-6 form-group">
+                <label for="companyTurnOver">COMPANY TURN OVER</label> 
+                <input type="text" class="form-control" id="companyTurnOver" placeholder="Enter the company turn over" required>
+            </div>
+            <div class=" col-sm-6 form-group">
+                <label for="companyWebsite">COMPANY WEBSITE</label> 
+                <input type="text" class="form-control" id="companyWebsite" placeholder="Enter the company website" required>
+            </div>
+            <div class=" col-sm-6 form-group">
+                <label for="stockExchange">STOCK EXCHANGE</label> 
+                <input type="text" class="form-control" id="stockExchange" placeholder="Enter the stock Exchange" required>
+            </div>
+
+            <div class="col-sm-6 form-group mb-0 ">
+                <button class="btn btn-primary float-left" [disabled]="!companyForm.valid">ADD</button>
+            </div>
+            <div class="col-sm-6 form-group mb-0">
+                <button class="btn btn-primary float-right" onclick="resetForm(companyForm)">RESET</button>
+            </div>
+        </div>
+    </form>
+</div>

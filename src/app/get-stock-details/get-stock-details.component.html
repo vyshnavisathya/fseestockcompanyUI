@@ -1,0 +1,49 @@
+<div class="container jumbotron">
+     <h2 class="text-center"> VIEW STOCK DETAILS</h2>
+     <div class="stock-view-form text-center">
+        <p>
+            Choose a start and end date to view stocks for a company
+        </p>
+        <br>
+        <form [formGroup]="stockForm" (submit)="viewStocks(stockForm)">
+            <div class="row">
+                <div class="stock-filed-wrapper col-lg-12 form-group ">
+                    <label for="companyCode">CompanyCode</label>
+                    <input type="text" id="companyCode" name="companyCode" class="form-control">   
+                    <label for="from">From</label>
+                    <input type="date" class="form-control" id="from" name="from">
+                    <label for="to">To</label>
+                    <input type="date" class="form-control" id="to" name="to">
+                    <button class="btn btn-primary">Submit</button>
+                </div>
+            </div>
+            
+        </form>
+
+        <div id="card-container" *ngIf="isPresent">
+            <div class="container">
+                <h2>Stock Details</h2>
+            <div class="row">
+                <div class="col-xs-12 col-sm-6 col-md-6 col-lg-12">
+                    <a href="">
+                        <div class="card-flyer">
+                            <div class="text-box">
+                                <div class="text-container">
+                                    <h3>Company Code : {{ company.companyCode }}</h3>
+                                        <div *ngFor="let stock of stocks.stockPriceList">
+                                            <h3>Stock Price : {{ stock.stockPrice }}</h3>
+                                            <h3>Created Date : {{ stock.stockCreatedDate }}</h3>
+                                        </div>
+                                            <h3>Max Stock Price : {{ stocks.maxStockPrice }}</h3>
+                                            <h3>Min Stock Price : {{ stocks.minStockPrice }}</h3>
+                                            <h3>Avg Stock Price : {{ stocks.avgStockPrice }}</h3>
+                                 </div>
+                             </div>
+                            </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+</div>
