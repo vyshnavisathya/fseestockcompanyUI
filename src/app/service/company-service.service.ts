@@ -8,17 +8,17 @@ import { Company } from '../model/company';
 })
 export class CompanyServiceService {
 
-  addCompany(company : Company) {
-    return this.httpClient.post(environment.companyUrl +"/register", company);
+  addCompany(company: Company) {
+    return this.httpClient.post(environment.companyUrl + '/register', company);
   }
 
   getAllCompanyDetails() {
-    console.log("Calling api companyUrl")
-    return this.httpClient.get(environment.companyUrl+"/all");
+    console.log('Calling api companyUrl');
+    return this.httpClient.get(environment.companyUrl + '/all');
   }
 
   getCompanyDetails(companyCode) {
     return this.httpClient.get(environment.companyUrl, companyCode);
   }
-  constructor(private httpClient : HttpClient) { }
+  constructor(private httpClient: HttpClient) { }
 }

@@ -1,9 +1,9 @@
 export class Stock {
 
-    id : number;
-    stockPrice : number;
-    companyCode : number;
-    date : Date;
+    id: number;
+    stockPrice: number;
+    companyCode: number;
+    date: Date;
 
     constructor() {
         this.id = 0;

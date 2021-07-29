@@ -19,9 +19,9 @@ export class AddStockPriceComponent implements OnInit {
 
   ngOnInit() {
     this.stockForm = new FormGroup({
-      "id" : new FormControl('', [Validators.required]),
-      "stockPrice" : new FormControl('', [Validators.required]),
-      "companyCode" : new FormControl('', [Validators.required])
+      id : new FormControl('', [Validators.required]),
+      stockPrice : new FormControl('', [Validators.required]),
+      companyCode : new FormControl('', [Validators.required])
     });
   }
   send(stockForm) {
@@ -29,9 +29,9 @@ export class AddStockPriceComponent implements OnInit {
       data => {
         this.stockForm.reset();
       }, err  => {
-        alert('API call failed:(')
+        alert('API call failed:(');
       }
-    )
+    );
 
   }
 

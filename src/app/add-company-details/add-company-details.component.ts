@@ -10,18 +10,18 @@ import { CompanyServiceService } from '../service/company-service.service';
 })
 export class AddCompanyDetailsComponent implements OnInit {
 
-  company : Company;
-  companyForm : FormGroup;
-  constructor(private companyService : CompanyServiceService) { }
+  company: Company;
+  companyForm: FormGroup;
+  constructor(private companyService: CompanyServiceService) { }
 
   ngOnInit() {
     this.companyForm = new FormGroup({
-      "companyCode" : new FormControl('', [Validators.required]),
-      "companyName" : new FormControl('', [Validators.required]),
-      "companyCeo"  : new FormControl('', [Validators.required]),
-      "companyTurnOver" : new FormControl('', [Validators.required]),
-      "companyWebsite" : new FormControl('', [Validators.required]),
-      "stockExchange" : new FormControl('', [Validators.required])
+      companyCode : new FormControl('', [Validators.required]),
+      companyName : new FormControl('', [Validators.required]),
+      companyCeo  : new FormControl('', [Validators.required]),
+      companyTurnOver : new FormControl('', [Validators.required]),
+      companyWebsite : new FormControl('', [Validators.required]),
+      stockExchange : new FormControl('', [Validators.required])
     });
   }
 
@@ -30,9 +30,9 @@ export class AddCompanyDetailsComponent implements OnInit {
       data => {
         this.companyForm.reset();
       }, err  => {
-        alert('API call failed:(')
+        alert('API call failed:(');
       }
-    )
+    );
 
   }
 

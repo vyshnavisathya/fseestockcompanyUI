@@ -14,23 +14,23 @@ export class HomePageComponent implements OnInit {
   ngOnInit() {
   }
 
-  addCompany= function () {
+  addCompany = function() {
     this.router.navigate(['/add-company']);
   };
 
-  getAllCompanies= function () {
+  getAllCompanies = function() {
     this.router.navigate(['/get-companies']);
   };
 
-  addStock= function () {
+  addStock = function() {
     this.router.navigate(['/add-stock']);
   };
 
-  getStock= function () {
+  getStock = function() {
     this.router.navigate(['/get-stock']);
   };
 
-  getCompany= function () {
+  getCompany = function() {
     this.router.navigate(['/get-company']);
   };
 

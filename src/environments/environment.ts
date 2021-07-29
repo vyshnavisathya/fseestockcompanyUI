@@ -4,8 +4,8 @@
 
 export const environment = {
   production: false,
-  stockUrl: "http://localhost:8090/api/v1.0/market/stock",
-  companyUrl: "http://localhost:8081/api/v1.0/market/company/info"
+  stockUrl: 'http://localhost:8090/api/v1.0/market/stock',
+  companyUrl: 'http://localhost:8081/api/v1.0/market/company/info'
 };
 
 /*

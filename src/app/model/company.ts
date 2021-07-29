@@ -1,18 +1,18 @@
 export class Company {
 
-    companyCode : number;
+    companyCode: number;
 
-    companyName : string;
+    companyName: string;
 
-    companyCeo : string;
+    companyCeo: string;
 
-    companyTurnover : number;
+    companyTurnover: number;
 
-    companyWebsite : string;
+    companyWebsite: string;
 
-    stockExchange : string;
+    stockExchange: string;
 
-    stockPriceofCompany : number;
+    stockPriceofCompany: number;
 
     constructor() {
         this.companyCode = 0;

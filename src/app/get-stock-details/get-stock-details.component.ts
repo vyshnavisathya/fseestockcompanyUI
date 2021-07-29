@@ -11,13 +11,13 @@ import { StockServiceService } from '../service/stock-service.service';
 })
 export class GetStockDetailsComponent implements OnInit {
 
-  stock : Stock;
+  stock: Stock;
   stockForm: FormGroup;
   companyCodeIn: string;
   companyCodeOut: string;
   startDateIn: Date;
   endDateIn: Date;
-  stocks : any;
+  stocks: any;
   isPresent = false;
   constructor(private stockService: StockServiceService) {
     this.companyCodeIn = '';
@@ -30,9 +30,9 @@ export class GetStockDetailsComponent implements OnInit {
 
   ngOnInit() {
     this.stockForm = new FormGroup({
-      "companyCode" : new FormControl('', [Validators.required]),
-      "from" : new FormControl(new Date(), [Validators.required]),
-      "to" : new FormControl(new Date(),  [Validators.required])
+      companyCode : new FormControl('', [Validators.required]),
+      from : new FormControl(new Date(), [Validators.required]),
+      to : new FormControl(new Date(),  [Validators.required])
     });
 
     }
@@ -52,7 +52,7 @@ export class GetStockDetailsComponent implements OnInit {
         console.log('api call failed', err);
         alert(err.error.message);
       }
-    )
+    );
 
   }
 }

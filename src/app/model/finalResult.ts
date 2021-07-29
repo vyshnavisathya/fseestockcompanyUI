@@ -2,10 +2,10 @@ import { Stock } from './stock';
 
 export class FinalResult {
 
-     stockPriceList : Array<Stock>;
-      minStockPrice : number;
-      maxStockPrice : number;
-      avgStockPrice : number;
+     stockPriceList: Array<Stock>;
+      minStockPrice: number;
+      maxStockPrice: number;
+      avgStockPrice: number;
 
       constructor() {
           this.stockPriceList = [];

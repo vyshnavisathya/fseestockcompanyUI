@@ -8,13 +8,13 @@ import { Stock } from '../model/stock';
 })
 export class StockServiceService {
 
-  addStock(stock : Stock) {
-    return this.httpClient.post(environment.stockUrl+"/add"+stock.companyCode, stock);
+  addStock(stock: Stock) {
+    return this.httpClient.post(environment.stockUrl + '/add' + stock.companyCode, stock);
   }
 
   viewStock(companyCodeIn: string, startDateIn: string, endDateIn: string) {
     console.log(`calling stock api -- get`);
-    return this.httpClient.get(environment.stockUrl+"/get/"+companyCodeIn+"/"+startDateIn+"/"+endDateIn);
+    return this.httpClient.get(environment.stockUrl + '/get/' + companyCodeIn + '/' + startDateIn + '/' + endDateIn);
   }
 
   constructor(private httpClient: HttpClient) { }
