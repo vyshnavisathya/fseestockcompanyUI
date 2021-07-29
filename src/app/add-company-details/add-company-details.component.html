@@ -6,31 +6,31 @@
         <div class="row jumbotron">
             <div class=" col-sm-6 form-group">
                 <label for="companyCode">COMPANY CODE</label> 
-                <input type="text" class=" form-control" id="companyCode" placeholder="Enter the company code" required>
+                <input type="text" class=" form-control" id="companyCode" formControlName="companyCode" placeholder="Enter the company code" required>
             </div>
             <div class=" col-sm-6 form-group">
                 <label for="companyName">COMPANY NAME</label> 
-                <input type="text" class="form-control" id="companyName" placeholder="Enter the company name" required>
+                <input type="text" class="form-control" id="companyName" formControlName="companyName" placeholder="Enter the company name" required>
             </div>
             <div class=" col-sm-6 form-group">
                 <label for="companyCeo">COMPANY CEO</label> 
-                <input type="text" class="form-control" id="companyCeo" placeholder="Enter the name of company ceo" required>
+                <input type="text" class="form-control" id="companyCeo" formControlName="companyCeo" placeholder="Enter the name of company ceo" required>
             </div>
             <div class=" col-sm-6 form-group">
                 <label for="companyTurnOver">COMPANY TURN OVER</label> 
-                <input type="text" class="form-control" id="companyTurnOver" placeholder="Enter the company turn over" required>
+                <input type="text" class="form-control" id="companyTurnOver" formControlName="companyTurnOver" placeholder="Enter the company turn over" required>
             </div>
             <div class=" col-sm-6 form-group">
                 <label for="companyWebsite">COMPANY WEBSITE</label> 
-                <input type="text" class="form-control" id="companyWebsite" placeholder="Enter the company website" required>
+                <input type="text" class="form-control" id="companyWebsite" formControlName="companyWebsite" placeholder="Enter the company website" required>
             </div>
             <div class=" col-sm-6 form-group">
                 <label for="stockExchange">STOCK EXCHANGE</label> 
-                <input type="text" class="form-control" id="stockExchange" placeholder="Enter the stock Exchange" required>
+                <input type="text" class="form-control" id="stockExchange" formControlName="stockExchange" placeholder="Enter the stock Exchange" required>
             </div>
 
             <div class="col-sm-6 form-group mb-0 ">
-                <button class="btn btn-primary float-left" [disabled]="!companyForm.valid">ADD</button>
+                <button class="btn btn-primary float-left" [disabled]="!companyForm.valid" >ADD</button>
             </div>
             <div class="col-sm-6 form-group mb-0">
                 <button class="btn btn-primary float-right" onclick="resetForm(companyForm)">RESET</button>

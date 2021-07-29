@@ -13,15 +13,15 @@ export class GetStockDetailsComponent implements OnInit {
 
   stock : Stock;
   stockForm: FormGroup;
-  companyCodeIn: string;
-  companyCodeOut: string;
+  companyCodeIn: number;
+  companyCodeOut: number;
   startDateIn: Date;
   endDateIn: Date;
   stocks : any;
   isPresent = false;
   constructor(private stockService: StockServiceService) {
-    this.companyCodeIn = '';
-    this.companyCodeOut = '';
+    this.companyCodeIn = 0;
+    this.companyCodeOut = 0;
     this.startDateIn =  new Date();
     this.endDateIn =  new Date();
     this.stocks = new FinalResult();
@@ -31,17 +31,48 @@ export class GetStockDetailsComponent implements OnInit {
   ngOnInit() {
     this.stockForm = new FormGroup({
       "companyCode" : new FormControl('', [Validators.required]),
-      "from" : new FormControl(new Date(), [Validators.required]),
-      "to" : new FormControl(new Date(),  [Validators.required])
+      "from" : new FormControl('', [Validators.required]),
+      "to" : new FormControl('',  [Validators.required])
     });
 
     }
 
+    // get companyCode() {
+    //   return this.stockForm.get('companyCode');
+    // }
+  
+    // set companyCode(fmCompanyCode: any) {
+    //   this.stockForm.setValue({
+    //     companyCode: fmCompanyCode.value
+    //   });
+    // }
+  
+    // get startDate() {
+    //   return this.stockForm.get('from');
+    // }
+  
+    // set startDate(fmStartDate: any) {
+    //   this.stockForm.setValue({
+    //     startDate: fmStartDate.value
+    //   });
+    // }
+  
+    // get endDate() {
+    //   return this.stockForm.get('to');
+    // }
+  
+    // set endDate(fmEndDate: any) {
+    //   this.stockForm.setValue({
+    //     endDate: fmEndDate.value
+    //   });
+    // }
+  
   viewStocks(stockForm) {
-    this.companyCodeIn = stockForm.value.companyCode;
-    this.startDateIn = stockForm.value.from;
-    this.endDateIn = stockForm.value.to;
-    this.stockService.viewStock(this.companyCodeIn, this.startDateIn.toISOString().substring(0, 10), this.endDateIn.toISOString().substring(0, 10)).subscribe(
+    console.log("StockForm", stockForm);
+    console.log("viewSTock ", this.companyCodeIn);
+    console.log("viewSTock ", this.startDateIn);
+    console.log("viewSTock ", this.endDateIn);
+    this.stockService.viewStock(this.companyCodeIn, this.startDateIn, this.endDateIn).subscribe(
       data => {
         console.log('api call success', data);
         this.isPresent = true;

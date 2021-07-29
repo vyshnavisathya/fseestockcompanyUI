@@ -5,16 +5,16 @@
         </h2>
         <div class="row jumbotron">
             <div class=" col-sm-12 form-group">
-                <label for="stockId">STOCK ID</label> 
-                <input type="text" class="form-control" id="stockId" placeholder="Enter the stock Id" required>
+                <label for="id">STOCK ID</label> 
+                <input type="text" class="form-control" id="id"  formControlName="id" placeholder="Enter the stock Id" required>
             </div>
             <div class=" col-sm-6 form-group">
                 <label for="stockPrice">STOCK PRICE</label> 
-                <input type="text" class="form-control" id="stockPrice" placeholder="Enter the stock price" required>
+                <input type="text" class="form-control" id="stockPrice" formControlName="stockPrice" placeholder="Enter the stock price" required>
             </div>
             <div class=" col-sm-6 form-group">
                 <label for="companyCode">COMPANY CODE</label> 
-                <input type="text" class="form-control" id="companyCode" placeholder="Enter the company code" required>
+                <input type="text" class="form-control" id="companyCode" formControlName="companyCode" placeholder="Enter the company code" required>
             </div>
             <div class="col-sm-6 form-group mb-0 ">
                 <button class="btn btn-primary float-left " [disabled]="!stockForm.valid">ADD</button>

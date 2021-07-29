@@ -9,12 +9,13 @@ import { Company } from '../model/company';
 export class CompanyServiceService {
 
   addCompany(company : Company) {
+    console.log("Calling api")
     return this.httpClient.post(environment.companyUrl +"/register", company);
   }
 
   getAllCompanyDetails() {
     console.log("Calling api companyUrl")
-    return this.httpClient.get(environment.companyUrl+"/all");
+    return this.httpClient.get(environment.companyUrl+"/info/all");
   }
 
   getCompanyDetails(companyCode) {

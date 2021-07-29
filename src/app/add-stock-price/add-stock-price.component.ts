@@ -21,13 +21,15 @@ export class AddStockPriceComponent implements OnInit {
     this.stockForm = new FormGroup({
       "id" : new FormControl('', [Validators.required]),
       "stockPrice" : new FormControl('', [Validators.required]),
-      "companyCode" : new FormControl('', [Validators.required])
+      "companyCode" : new FormControl('', [Validators.required]),
+      "date" : new FormControl(new Date())
     });
   }
   send(stockForm) {
-    this.stockService.addStock(this.stockForm.value).subscribe(
+    console.log("stock Fprm" , stockForm.value);
+    this.stockService.addStock(stockForm.value).subscribe(
       data => {
-        this.stockForm.reset();
+        stockForm.reset();
       }, err  => {
         alert('API call failed:(')
       }

@@ -26,9 +26,10 @@ export class AddCompanyDetailsComponent implements OnInit {
   }
 
   send(companyForm) {
-    this.companyService.addCompany(this.companyForm.value).subscribe(
+    console.log("company ",companyForm.value);
+    this.companyService.addCompany(companyForm.value).subscribe(
       data => {
-        this.companyForm.reset();
+       companyForm.reset();
       }, err  => {
         alert('API call failed:(')
       }
@@ -36,8 +37,8 @@ export class AddCompanyDetailsComponent implements OnInit {
 
   }
 
-  resetForm(stockForm ) {
-    stockForm.reset();
+  resetForm(companyForm ) {
+    companyForm.reset();
   }
 
 }
