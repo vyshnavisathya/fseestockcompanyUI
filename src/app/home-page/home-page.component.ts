@@ -15,11 +15,11 @@ export class HomePageComponent implements OnInit {
   }
 
   addCompany = function() {
-    this.router.navigate(['/add-company']);
+    this.router.navigate(['/login']);
   };
 
   getAllCompanies = function() {
-    this.router.navigate(['/get-companies']);
+    this.router.navigate(['/register']);
   };
 
   addStock = function() {

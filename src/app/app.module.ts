@@ -12,6 +12,9 @@ import { GetAllCompanyDetailsComponent } from './get-all-company-details/get-all
 import { GetStockDetailsComponent } from './get-stock-details/get-stock-details.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { Ng2SearchPipeModule } from 'ng2-search-filter';
+import { LoginComponent } from './login/login.component';
+import { RegisterComponent } from './register/register.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +24,10 @@ import { Ng2SearchPipeModule } from 'ng2-search-filter';
     HomePageComponent,
     GetCompanyDetailsComponent,
     GetAllCompanyDetailsComponent,
-    GetStockDetailsComponent
+    GetStockDetailsComponent,
+    LoginComponent,
+    RegisterComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,

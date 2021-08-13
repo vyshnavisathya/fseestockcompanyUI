@@ -12,7 +12,10 @@ export class AddCompanyDetailsComponent implements OnInit {
 
   company: Company;
   companyForm: FormGroup;
-  constructor(private companyService: CompanyServiceService) { }
+  isPresent = false;
+  constructor(private companyService: CompanyServiceService) { 
+    this.isPresent = false;
+  }
 
   ngOnInit() {
     this.companyForm = new FormGroup({
@@ -29,7 +32,8 @@ export class AddCompanyDetailsComponent implements OnInit {
     console.log('company ', companyForm.value);
     this.companyService.addCompany(companyForm.value).subscribe(
       data => {
-       companyForm.reset();
+        this.isPresent = true;
+       //companyForm.reset();
       }, err  => {
         alert('API call failed:(');
       }

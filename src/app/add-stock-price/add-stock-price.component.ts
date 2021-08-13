@@ -19,7 +19,7 @@ export class AddStockPriceComponent implements OnInit {
 
   ngOnInit() {
     this.stockForm = new FormGroup({
-      id : new FormControl('', [Validators.required]),
+      // id : new FormControl('', [Validators.required]),
       stockPrice : new FormControl('', [Validators.required]),
       companyCode : new FormControl('', [Validators.required])
     });

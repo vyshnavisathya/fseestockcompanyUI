@@ -9,6 +9,7 @@ import { Company } from '../model/company';
 export class CompanyServiceService {
 
   addCompany(company: Company) {
+    console.log("calling company api", company)
     return this.httpClient.post(environment.companyUrl + '/register', company);
   }
 

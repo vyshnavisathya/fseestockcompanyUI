@@ -9,11 +9,12 @@ import { Stock } from '../model/stock';
 export class StockServiceService {
 
   addStock(stock: Stock) {
-    return this.httpClient.post(environment.stockUrl + '/add' + stock.companyCode, stock);
+    console.log("calling stock add api", stock)
+    return this.httpClient.post(environment.stockUrl + '/add/' + stock.companyCode, stock);
   }
 
-  viewStock(companyCodeIn: number, startDateIn: Date, endDateIn: Date) {
-    console.log(`calling stock api -- get`);
+  viewStock(companyCodeIn: number, startDateIn: string, endDateIn: string) {
+    console.log(`calling stock api -- get`, companyCodeIn, startDateIn, endDateIn);
     return this.httpClient.get(environment.stockUrl + '/get/' + companyCodeIn + '/' + startDateIn + '/' + endDateIn);
   }
 
